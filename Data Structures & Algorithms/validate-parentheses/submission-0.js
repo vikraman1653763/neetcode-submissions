@@ -1,7 +1,7 @@
 class Solution {
     /**
      * @param {string} s
-     * @return {boolean}
+     * @return {boolean} 
      */
     isValid(s) {
         let stack = [];
