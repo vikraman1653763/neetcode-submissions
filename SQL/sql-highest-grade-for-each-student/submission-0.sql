@@ -1,0 +1,2 @@
+-- Write your query below
+select t1.student_id , t1.exam_id, t1.score from exam_results as t1 where t1.score = (select Max(score) from exam_results as t2 where t1.student_id = t2.student_id) and t1.exam_id = (select Min(exam_id) from exam_results as t2 where t1.student_id = t2.student_id and t2.score =(select max(t3.score) from exam_results as t3 where t1.student_id = t3.student_id)) order by t1.student_id ASC;
